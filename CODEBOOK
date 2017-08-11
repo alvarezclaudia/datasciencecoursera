@@ -1,0 +1,127 @@
+Getting and Cleaning Data Project
+
+Description
+One of the most exciting areas in all of data science right now is wearable computing. 
+Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
+This experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+The experiments have been video-recorded to label the data manually. 
+The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window).
+The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. 
+The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. 
+From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+For each record in the dataset it is provided:
+    Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+    Triaxial Angular velocity from the gyroscope.
+    A 561-feature vector with time and frequency domain variables.
+    Its activity label.
+    An identifier of the subject who carried out the experiment.
+
+The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
+A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Here are the data for the project:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+
+The variables that correspond to each column found in "tidy.txt", in order of appearance, are as follows...
+
+Variable 1) "subject" the unique identifier given to each of the 30 volunteers
+
+Variable 2) "activity_id" the type of physical activity thus: 1 - WALKING, 2 - WALKING_UPSTAIRS, 3 - WALKING_DOWNSTAIRS, 4 - SITTING, 5 - STANDING, 6 - LAYING
+
+Each variable name can thus be understood. The full list of quantitative variable names are as follows:
+
+timebodyaccelerometerMEAN()x
+timebodyaccelerometerMEAN()y
+timebodyaccelerometerMEAN()z
+timebodyaccelerometerSD()x
+timebodyaccelerometerSD()y
+timebodyaccelerometerSD()z
+timegravityaccelerometerMEAN()x
+timegravityaccelerometerMEAN()y
+timegravityaccelerometerMEAN()z
+timegravityaccelerometerSD()x
+timegravityaccelerometerSD()y
+timegravityaccelerometerSD()z
+timebodyaccelerometerjerkMEAN()x
+timebodyaccelerometerjerkMEAN()y
+timebodyaccelerometerjerkMEAN()z
+timebodyaccelerometerjerkSD()x
+timebodyaccelerometerjerkSD()y
+timebodyaccelerometerjerkSD()z
+timebodygyroscopeMEAN()x
+timebodygyroscopeMEAN()y
+timebodygyroscopeMEAN()z
+timebodygyroscopeSD()x
+timebodygyroscopeSD()y
+timebodygyroscopeSD()z
+timebodygyroscopejerkMEAN()x
+timebodygyroscopejerkMEAN()y
+timebodygyroscopejerkMEAN()z
+timebodygyroscopejerkSD()x
+timebodygyroscopejerkSD()y
+timebodygyroscopejerkSD()z
+timebodyaccelerometermagnitudeMEAN()
+timebodyaccelerometermagnitudeSD()
+timegravityaccelerometermagnitudeMEAN()
+timegravityaccelerometermagnitudeSD()
+timebodyaccelerometerjerkmagnitudeMEAN()
+timebodyaccelerometerjerkmagnitudeSD()
+timebodygyroscopemagnitudeMEAN()
+timebodygyroscopemagnitudeSD()
+timebodygyroscopejerkmagnitudeMEAN()
+timebodygyroscopejerkmagnitudeSD()
+frequencybodyaccelerometerMEAN()x
+frequencybodyaccelerometerMEAN()y
+frequencybodyaccelerometerMEAN()z
+frequencybodyaccelerometerSD()x
+frequencybodyaccelerometerSD()y
+frequencybodyaccelerometerSD()z
+frequencybodyaccelerometerMEANfrequency()x
+frequencybodyaccelerometerMEANfrequency()y
+frequencybodyaccelerometerMEANfrequency()z
+frequencybodyaccelerometerjerkMEAN()x
+frequencybodyaccelerometerjerkMEAN()y
+frequencybodyaccelerometerjerkMEAN()z
+frequencybodyaccelerometerjerkSD()x
+frequencybodyaccelerometerjerkSD()y
+frequencybodyaccelerometerjerkSD()z
+frequencybodyaccelerometerjerkMEANfrequency()x
+frequencybodyaccelerometerjerkMEANfrequency()y
+frequencybodyaccelerometerjerkMEANfrequency()z
+frequencybodygyroscopeMEAN()x
+frequencybodygyroscopeMEAN()y
+frequencybodygyroscopeMEAN()z
+frequencybodygyroscopeSD()x
+frequencybodygyroscopeSD()y
+frequencybodygyroscopeSD()z
+frequencybodygyroscopeMEANfrequency()x
+frequencybodygyroscopeMEANfrequency()y
+frequencybodygyroscopeMEANfrequency()z
+frequencybodyaccelerometermagnitudeMEAN()
+frequencybodyaccelerometermagnitudeSD()
+frequencybodyaccelerometermagnitudeMEANfrequency()
+frequencybodyaccelerometerjerkmagnitudeMEAN()
+frequencybodyaccelerometerjerkmagnitudeSD()
+frequencybodyaccelerometerjerkmagnitudeMEANfrequency()
+frequencybodygyroscopemagnitudeMEAN()
+frequencybodygyroscopemagnitudeSD()
+frequencybodygyroscopemagnitudeMEANfrequency()
+frequencybodygyroscopejerkmagnitudeMEAN()
+frequencybodygyroscopejerkmagnitudeSD()
+frequencybodygyroscopejerkmagnitudeMEANfrequency()
+angle(timebodyaccelerometerMEAN,gravity)
+angle(timebodyaccelerometerjerkMEAN),gravityMEAN)
+angle(timebodygyroscopeMEAN,gravityMEAN)
+angle(timebodygyroscopejerkMEAN,gravityMEAN)
+angle(x,gravityMEAN)
+angle(y,gravityMEAN)
+angle(z,gravityMEAN)
